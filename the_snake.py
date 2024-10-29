@@ -182,5 +182,5 @@ def main():
         screen.fill(BOARD_BACKGROUND_COLOR)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
