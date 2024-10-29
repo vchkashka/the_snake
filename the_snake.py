@@ -41,6 +41,7 @@ clock = pygame.time.Clock()
 
 class GameObject:
     """Базовый класс для всех обьектов игры."""
+
     def __init__(self, position=((SCREEN_WIDTH // 2), (SCREEN_HEIGHT // 2)),
                  body_color=BOARD_BACKGROUND_COLOR):
         self.position = position
@@ -53,6 +54,7 @@ class GameObject:
 
 class Apple(GameObject):
     """Класс, представляющий собой еду для змейки - яблоки"""
+
     def __init__(self, body_color=APPLE_COLOR):
         super().__init__()
         self.body_color = body_color
@@ -71,6 +73,7 @@ class Apple(GameObject):
 
 class Snake(GameObject):
     """Класс, представляющий змейку."""
+
     def __init__(self, length=1,
                  positions=[((SCREEN_WIDTH // 2), (SCREEN_HEIGHT // 2))],
                  direction=RIGHT, next_direction=None, body_color=SNAKE_COLOR):
@@ -160,6 +163,7 @@ def handle_keys(game_object):
 
 
 def main():
+    """Функция, содержащая основной игровой цикл."""
     pygame.init()
     snake = Snake()
     apple = Apple()
