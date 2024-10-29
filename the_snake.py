@@ -77,6 +77,7 @@ class Snake(GameObject):
     def __init__(self, length=1,
                  positions=[((SCREEN_WIDTH // 2), (SCREEN_HEIGHT // 2))],
                  direction=RIGHT, next_direction=None, body_color=SNAKE_COLOR):
+        super().__init__()
         self.length = length
         self.positions = positions
         self.direction = direction
